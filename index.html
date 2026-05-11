@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>단국대학교 검도부</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: black;
+      overflow-x: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      padding: 40px;
+
+      position: relative;
+    }
+
+    section::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background: linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.7)
+      );
+
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+
+      width: 100%;
+      max-width: 900px;
+
+      margin: 0 auto;
+    }
+
+    .hero {
+      background-image: url("images/kendo.png");
+    }
+
+    .training {
+      background-image: url("images/장소.jpeg");
+    }
+
+    .team {
+      background-image: url("images/team.png");
+    }
+
+    .activity {
+      background-image: url("images/대회.jpg");
+    }
+
+    .gallery {
+      background: black;
+    }
+
+    .instagram {
+      background-image: url("images/검도부 로고.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: black;
+    }
+
+    h1 {
+      font-size: 72px;
+      margin: 0;
+
+      letter-spacing: 4px;
+    }
+
+    h2 {
+      font-size: 56px;
+      margin-bottom: 20px;
+
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .insta-link {
+      display: inline-block;
+
+      margin-top: 35px;
+      padding: 14px 28px;
+
+      border: 1px solid white;
+
+      color: white;
+      text-decoration: none;
+
+      transition: 0.3s;
+    }
+
+    .insta-link:hover {
+      background: white;
+      color: black;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+
+      margin-top: 40px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 240px;
+
+      object-fit: cover;
+
+      border-radius: 12px;
+
+      filter: brightness(0.9);
+
+      transition: 0.4s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+      filter: brightness(1);
+    }
+
+    /* 스크롤 애니메이션 */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(80px);
+
+      transition:
+      opacity 1.2s ease,
+      transform 1.2s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 모바일 */
+
+    @media (max-width: 768px) {
+
+      section {
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid img {
+        height: 180px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- 메인 -->
+
+  <section class="hero">
+
+    <div class="content reveal">
+
+      <h1>단국대학교 검도부</h1>
+
+      <p>
+        20대 청춘, 검도부에서 <br>
+        낭만을 함께.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- 수련 -->
+
+  <section class="training">
+
+    <div class="content reveal">
+
+      <h2>수련시간</h2>
+
+      <p>
+        월요일 ~ 금요일 <br>
+        운동시간: 19:00 ~ 20:30. / 20:30 ~ 22:00.<br>
+        장소: 현암재검도관
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- 주요 활동 -->
+
+  <section class="activity">
+
+    <div class="content reveal">
+
+      <h2>주요활동</h2>
+
+      <p>
+        대학 검도대회 및 외부 검도대회 출전 <br>
+        타 대학과의 다양한 교류 활동을 이어가고 있습니다.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- 활동 갤러리 -->
+
+  <section class="검도부 활동">
+
+    <div class="content reveal">
+
+      <h2>Our Moments</h2>
+
+      <div class="gallery-grid">
+
+        <img src="images/교류전.jpg">
+        <img src="images/OBYB전.jpg">
+        <img src="images/명지대.jpg">
+        <img src="images/2.jpg">
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 초보자 -->
+
+  <section class="team">
+
+    <div class="content reveal">
+
+      <h2>초보자 여러분도 함께</h2>
+
+      <p>
+        초보자 여러분을 환영합니다.<br>
+        검도는 남녀노소 누구나 즐길수 있는 스포츠입니다.<br>
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- 마지막 -->
+
+  <section class="instagram">
+
+    <div class="content reveal">
+
+      <a
+        class="insta-link"
+        href="https://instagram.com/dku_kumdo"
+        target="_blank">
+
+        검도부 Instagram 바로가기
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <script>
+
+    const reveals =
+    document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+
+      reveals.forEach((item) => {
+
+        const top =
+        item.getBoundingClientRect().top;
+
+        if (top < window.innerHeight - 100) {
+
+          item.classList.add("active");
+
+        }
+
+      });
+
+    }
+
+    window.addEventListener(
+      "scroll",
+      revealOnScroll
+    );
+
+    window.addEventListener(
+      "load",
+      revealOnScroll
+    );
+
+  </script>
+
+</body>
+
+</html>
